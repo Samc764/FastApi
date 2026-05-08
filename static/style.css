@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #0a0a1a;
+    color: #f0e6ff;
+}
+
+/* Navbar */
+.navbar-magica {
+    background: rgba(10, 10, 26, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-magica .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.nav-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #e0b0ff;
+    text-decoration: none;
+}
+
+.nav-links { display: flex; gap: 1rem; }
+
+.nav-links a {
+    color: #a89cc8;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: #f0e6ff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Contenido */
+.main-content {
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Títulos */
+.titulo-magico {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: #e0b0ff;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo-magico {
+    text-align: center;
+    color: #a89cc8;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
+
+/* Cards */
+.card-magica {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* Formulario */
+.form-magico label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #e0b0ff;
+    font-size: 0.95rem;
+}
+
+.form-magico input,
+.form-magico textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #f0e6ff;
+}
+
+.form-magico input:focus,
+.form-magico textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Botones */
+.btn-magico {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #4a1a7a, #667eea);
+    color: white;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-magico:hover { opacity: 0.9; }
+
+.btn-secundario {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: #e0b0ff;
+    padding: 0.7rem 1.4rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-secundario:hover {
+    border-color: #e0b0ff;
+    background: rgba(224, 176, 255, 0.08);
+}
+
+.btn-peligro {
+    background: rgba(231, 76, 60, 0.15);
+    color: #ff6b6b;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn-peligro:hover { background: rgba(231, 76, 60, 0.25); }
+
+/* Respuesta */
+.respuesta-destacada {
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.respuesta-destacada .respuesta-texto {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e0b0ff;
+    margin-top: 0.5rem;
+}
+
+.respuesta-destacada .etiqueta {
+    color: #a89cc8;
+    font-size: 0.95rem;
+}
+
+/* Historial */
+.historial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.card-historial {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #764ba2;
+    border-radius: 10px;
+    padding: 1.2rem;
+}
+
+.card-historial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.card-historial-header .nombre {
+    font-weight: 600;
+    color: #f0e6ff;
+}
+
+.card-historial-header .numero {
+    background: rgba(102, 126, 234, 0.15);
+    color: #667eea;
+    padding: 0.15rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.card-historial .pregunta {
+    color: #a89cc8;
+    font-style: italic;
+    margin-bottom: 0.6rem;
+}
+
+.card-historial .respuesta {
+    color: #e0b0ff;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.card-historial-footer { text-align: right; }
+
+.contador-preguntas {
+    color: #a89cc8;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Estado vacío */
+.estado-vacio {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.estado-vacio .icono {
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.estado-vacio .mensaje {
+    font-size: 1.1rem;
+    color: #a89cc8;
+    margin-bottom: 1.2rem;
+}
+
+/* Acciones */
+.acciones-centradas {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+.footer-magico {
+    background: rgba(10, 10, 26, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.footer-magico p { color: #a89cc8; font-size: 0.9rem; }
+.footer-magico span { color: #e0b0ff; }
+
+/* Utilidades */
+.text-center { text-align: center; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .titulo-magico { font-size: 1.5rem; }
+    .historial-grid { grid-template-columns: 1fr; }
+    .navbar-magica .container { flex-direction: column; gap: 0.5rem; }
+    .acciones-centradas { flex-direction: column; align-items: center; }
+}
