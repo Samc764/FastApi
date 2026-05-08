@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block titulo %}Pregunta Mágica{% endblock %}
+
+{% block contenido %}
+<div class="text-center mb-3">
+    <h1 class="titulo-magico">🔮 Pregunta a la Máquina Mágica</h1>
+    <p class="subtitulo-magico">Escribe tu pregunta y recibe una respuesta misteriosa...</p>
+</div>
+
+<div style="max-width: 600px; margin: 0 auto;">
+    <div class="card-magica">
+        <form action="/procesar_pregunta" method="POST" class="form-magico">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre" required
+                   placeholder="¿Cómo te llamas?" />
+
+            <label for="pregunta">Tu pregunta</label>
+            <textarea id="pregunta" name="pregunta" required
+                      placeholder="¿Qué quieres saber?" rows="4"></textarea>
+
+            <button type="submit" class="btn-magico">🎲 Preguntar</button>
+        </form>
+    </div>
+</div>
+
+<div class="acciones-centradas mt-4">
+    <a href="/historial" class="btn-secundario">📜 Ver historial</a>
+</div>
+{% endblock %}
