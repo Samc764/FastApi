@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block titulo %}Historial de Preguntas{% endblock %}
+
+{% block contenido %}
+<div class="text-center mb-3">
+    <h1 class="titulo-magico">📜 Historial de preguntas</h1>
+    <p class="subtitulo-magico">Revisa las preguntas enviadas recientemente.</p>
+</div>
+
+{% if preguntas %}
+<div class="grid-historial">
+    {% for item in preguntas|reverse %}
+    <div class="card-magica">
+        <p><strong>{{ item.nombre }}</strong> preguntó:</p>
+        <p class="pregunta-historial">«{{ item.pregunta }}»</p>
+        <p class="respuesta-magica">{{ item.respuesta }}</p>
+        <p class="fecha-magica">{{ item.fecha }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="card-magica">
+    <p>No hay preguntas registradas todavía.</p>
+</div>
+{% endif %}
+
+<div class="acciones-centradas mt-4">
+    <a href="/" class="btn-magico">🔮 Volver al inicio</a>
+</div>
+{% endblock %}

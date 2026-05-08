@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block titulo %}Respuesta Mágica{% endblock %}
+
+{% block contenido %}
+<div class="text-center mb-3">
+    <h1 class="titulo-magico">✨ Respuesta para {{ registro.nombre }}</h1>
+    <p class="subtitulo-magico">Aquí está tu resultado mágico.</p>
+</div>
+
+<div class="card-magica">
+    <p><strong>Tu pregunta:</strong></p>
+    <p class="pregunta-historial">«{{ registro.pregunta }}»</p>
+    <p class="respuesta-magica">{{ registro.respuesta }}</p>
+    <p class="fecha-magica">{{ registro.fecha }}</p>
+</div>
+
+<div class="acciones-centradas mt-4">
+    <a href="/" class="btn-secundario">🔙 Volver al formulario</a>
+    <a href="/historial" class="btn-magico">📜 Ver historial</a>
+</div>
+{% endblock %}
